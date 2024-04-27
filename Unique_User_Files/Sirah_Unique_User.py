@@ -19,13 +19,15 @@ def check_content(driver):
         time.sleep(10)
     
     # Check if there are images
-    images = driver.find_elements_by_tag_name('img')
+    # images = driver.find_elements_by_tag_name('img')
+    images = driver.find_elements(By.TAG_NAME, 'img') # had to replace code
     if images:
         # Extend presence time by 10 seconds for every image
         time.sleep(len(images) * 10)
     
     # Check if a link exists
-    links = driver.find_elements_by_tag_name('a')
+   # links = driver.find_elements_by_tag_name('a')
+    links = driver.find_elements(By.TAG_NAME, 'a') # updated this line as well
     if links:
         # Extend presence time by 10 seconds and click on the link
         link = links[0]  # Click on the first link found

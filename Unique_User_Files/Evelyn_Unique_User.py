@@ -82,7 +82,7 @@ def main(url):
 
 # Test the script against a website with elements of the unique user's preference
 print("Testing against a website with elements of the unique user's preference:")
-main("http://localhost:3001/")
+main("http://localhost:3000/") #was 3001, had to change to test local
 
 # Test the script against a website without elements of the unique user's preference
 print("\nTesting against a website without elements of the unique user's preference:")
