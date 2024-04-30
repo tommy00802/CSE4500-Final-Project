@@ -33,7 +33,7 @@ def check_content(driver):
         link = links[0]  # Click on the first link found
         link.click()
         # Wait for the new page to load
-        WebDriverWait(driver, 10).until(EC.url_changes(url))
+        WebDriverWait(driver, 30).until(EC.url_changes(url))
 
         # Recursively check the requirements on the new page
         check_content(driver)
