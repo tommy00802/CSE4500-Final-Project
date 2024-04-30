@@ -17,12 +17,16 @@ def button_interactions(url):
         buttons = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "button, input[type='button'], input[type='submit'], input[type='reset'], a.btn, a.button")))
         print(f"Found {len(buttons)} buttons.")
 
-        presence_time = (len(buttons) // 2) * 15  # add 15 seconds for every 2 buttons 
+        additional_time = (len(buttons) // 2) * 15  # add 15 seconds for every 2 buttons 
+        presence_time = 10 + additional_time
 
         print(f"Total presence time based on button count: {presence_time} seconds")
 
     except Exception as e:
         print(f"No buttons were found.")
+        presence_time = 10
+
+    print(f"Presence time: {presence_time} seconds")        
 
 button_interactions(url)
 driver.quit()

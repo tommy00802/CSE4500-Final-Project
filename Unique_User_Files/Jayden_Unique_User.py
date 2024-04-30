@@ -83,6 +83,8 @@ if __name__ == "__main__":
     print(f"Opening Wired:")
     user.read_article("https://www.wired.com/")
 
+    
+
     # Read the content of the local HTML file
     #current_directory = os.path.dirname(os.path.abspath(__file__))
     #with open(os.path.join(current_directory, "without_images.html"), "r", encoding="utf-8") as file:
