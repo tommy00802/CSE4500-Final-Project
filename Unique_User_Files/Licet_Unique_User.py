@@ -11,6 +11,23 @@ url = input("Enter the URL: ")
 driver.get(url)
 wait = WebDriverWait(driver, 30)  
 
+def findText(driver, keyword):
+    if keyword.lower() in driver.page_source.lower():
+        return True
+    else:
+        return False
+
+def userAction(driver):
+    reward_time = 10
+    helper = ["students", "another"]
+    print("in userAction")
+    for item in helper:
+        if findText(driver, item):
+            time.sleep(reward_time)
+
+            # if i did this wrong for whatever reason lmk
+            # dm me licet torres in the class discord
+
 def button_interactions(url):
     try:
         # find buttons
